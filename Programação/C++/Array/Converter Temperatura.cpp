@@ -22,4 +22,3 @@ int main()
 		cout << "Tinha apenas duas opções e voce errou de algum jeito";
 	}
 }
- 
