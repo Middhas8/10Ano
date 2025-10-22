@@ -14,10 +14,11 @@ int main()
 	int idades[5] = {};
 	for (int i = 0; i < 5; i++)
 	{
-		idades[i] = (rand() % 40) + 15; 
+		idades[i] = (rand() % 41) + 15; 
 	} 
 	cout << "Quem queres saber a idade?(1-5)";
 	cin >> r;
 	cout << "A idade de " << nomes[r - 1] << " é " << idades[r - 1] << " anos.\n";
 	return 0;
 }
+
