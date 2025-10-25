@@ -10,7 +10,7 @@ int main()
 	setlocale(LC_ALL, "Portuguese");
 	srand(time(0));
 	int r;
-	string nomes[5] = { "A","B","C","D","E" };
+	string nomes[5] = { "Amelia","Bruna","Carlos","Daniel","Eduardo" };
 	int idades[5] = {};
 	for (int i = 0; i < 5; i++)
 	{
@@ -21,4 +21,3 @@ int main()
 	cout << "A idade de " << nomes[r - 1] << " é " << idades[r - 1] << " anos.\n";
 	return 0;
 }
-
