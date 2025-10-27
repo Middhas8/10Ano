@@ -9,7 +9,7 @@ int main()
 {
 	setlocale(LC_ALL, "Portuguese");
 	srand(time(0));
-	int RandNum = rand() % 100 + 1, Adv = 0, N, Con = 0;
+	int RandNum = rand() % 99 + 1, Adv = 0, N, Con = 0;
 	do {
  
 		cout << "Me de um numero entre 1 e 100: ";
