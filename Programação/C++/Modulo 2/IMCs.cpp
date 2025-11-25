@@ -32,13 +32,14 @@ int main() {
 	setlocale(LC_ALL, "Portuguese");
 	int i;
 	float num = 0, imc[10], alt[10], pes[10];
+			cout << "ex: 1.68, ";
 	for (i = 0; i < 10; i++)
 	{
-		bar();
-		cout << "Altura(cm), ex: 1.68 : ";
+		cout << "Altura(cm): ";
 		cin >> alt[i];
 		cout << "Peso(kg) : ";
 		cin >> pes[i];
+			bar();
 		imc[i] = pes[i] / (alt[i] * alt[i]);
 		if (i == 9) {
 			bar();
