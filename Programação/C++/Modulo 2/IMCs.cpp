@@ -40,7 +40,6 @@ int main() {
 		cout << "Peso(kg) : ";
 		cin >> pes[i];
 		imc[i] = pes[i] / (alt[i] * alt[i]);
-		cout << i + 1 << "º " << imc[i] << endl;
 		if (i == 9) {
 			bar();
 		}
