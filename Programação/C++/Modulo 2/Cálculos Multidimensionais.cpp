@@ -20,11 +20,9 @@ int main()
 		cout << b + 1 << "º Matriz	";
 		bar();
 		for (i = 0; i < 5; i++) {// i == Linha da matriz
+			cout << "\nLinha número " << i + 1;
+			bar();
 			for (j = 0; j < 3; j++) {// j == Qual numero
-				if (j == 0) {
-					cout << "\nLinha número " << i + 1;
-					bar();
-				}
 				cout << j + 1 << "º número : ";
 				if (b == 0) {
 					cin >> Matriz1[i][j];
@@ -32,21 +30,14 @@ int main()
 				else {
 					cin >> Matriz2[i][j];
 				}
-
-				if (j == 2)
-				{
-					system("CLS");
-				}
 			}
+			system("CLS");
 		}
 	}
 	do {
-		bar();
-		cout << "Qual calculo queres fazer?";
-		bar2();
+		bar(); cout << "Qual calculo queres fazer?"; bar2();
 		cout << "        Adição[1]";	bar2();
 		cout << "       Subtração[2]";	bar2();
-		cout << "     Multiplicação[3]";	bar2();
 		cout << "    Nada, quero sair[0]";	bar();
 
 		cin >> escolha;
@@ -55,25 +46,21 @@ int main()
 			for (j = 0; j < 3; j++) {
 				if (escolha == 1) {
 					Cálculos[i][j] = Matriz2[i][j] + Matriz1[i][j];
-				}
-				else if (escolha == 2) {
+				} else if (escolha == 2) {
 					Cálculos[i][j] = Matriz2[i][j] - Matriz1[i][j];
-				}
-				else if (escolha == 3) {
-					Cálculos[i][j] = Matriz2[i][j] * Matriz1[i][j];
 				} else {
 					break;
-				} 
-				if (j == 0) {
-					cout << " | " << Cálculos[i][j];
-				} else if (j == 1) {
-					cout << " : " << Cálculos[i][j];
-				} else {
-					cout << " : " << Cálculos[i][j] << " | \n";
 				}
-
-				if (j == 2) {
-					cout << endl;
+				switch (j) {
+				case 0:
+					cout << " | " << Cálculos[i][j];
+					break;
+				case 1:
+					cout << " : " << Cálculos[i][j];
+					break;
+				default:
+					cout << " : " << Cálculos[i][j] << " | \n\n";
+					break;
 				}
 				if (i == 4 && j == 2) {
 					cout << "\nQueres fazer outro calculo? [ 0(Sair) / 1(Outro calculo) ] : ";
