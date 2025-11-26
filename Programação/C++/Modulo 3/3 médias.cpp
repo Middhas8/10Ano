@@ -14,12 +14,13 @@ int main()
 {
 	setlocale(LC_ALL, "Portuguese");
 	int  i, j, turma_notas[10][10], med[10]{ 0,0,0,0,0,0,0,0,0,0 };
+	string nomes[10] = { "António","Anabela","Beatriz","Bernardo","Clara","Carlos","Diana","Diogo","Elisabete","Eurico" }, disciplinas[10] = { "Portugues","Ingles","Fisica","TLP","TIC","Matemática","ACS","Filosofia","Quimica","Ed.Fis." };
 	for (i = 0; i < 10; i++) {
 		system("CLS");
 		cout << "Notas " << i + 1 << "º Aluno \n";
 		bar();
 		for (j = 0; j < 10; j++) {
-			cout << j + 1 << "º Nota : ";
+			cout << disciplinas[j] << " Nota : ";
 			cin >> turma_notas[i][j];
 			if (turma_notas[i][j] < 0 || turma_notas[i][j]>20) {
 				cout << "Nota invalida, numero apenas entre 0 a 20\n";
@@ -40,7 +41,7 @@ int main()
 
 	for (int i = 0; i < 10; i++) {
 		bar();
-		cout << "\nMédia das notas do " << i + 1 << "º aluno : " << med[i] << "\n\n";
+		cout << "\nA média da notas de " << nomes[i] << " é de : " << med[i] << "\n\n";
 		if (i == 9) {
 			bar();
 		}
