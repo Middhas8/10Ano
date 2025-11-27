@@ -13,7 +13,7 @@ void bar() {
 int main()
 {
 	setlocale(LC_ALL, "Portuguese");
-	int  i, j, turma_notas[10][10], med[10]{ 0,0,0,0,0,0,0,0,0,0 };
+	int  i, j, turma_notas[10][10], med[10]{ 0,0,0,0,0,0,0,0,0,0 }, num, num2=0;
 	string nomes[10] = { "António","Anabela","Beatriz","Bernardo","Clara","Carlos","Diana","Diogo","Elisabete","Eurico" }, disciplinas[10] = { "Portugues","Ingles","Fisica","TLP","TIC","Matemática","ACS","Filosofia","Quimica","Ed.Fis." };
 	for (i = 0; i < 10; i++) {
 		system("CLS");
@@ -40,11 +40,19 @@ int main()
 	}
 
 	for (int i = 0; i < 10; i++) {
+		num2 = 0;
 		bar();
 		cout << "\nA média da notas de " << nomes[i] << " é de : " << med[i] << "\n\n";
+		for ( j = 0; j < 10; j++) {
+			if (med[i] > med[j]) {
+				num = med[i];
+				num2++;
+			}
+		}
 		if (i == 9) {
 			bar();
 		}
 	}
+	cout << "\nE a nota mais alta e a nota de " << nomes[num2] << " sendo a sua nota de " << med[num2];
 	return 0;
 }
