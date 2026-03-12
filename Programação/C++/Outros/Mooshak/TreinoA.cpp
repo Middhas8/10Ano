@@ -1,14 +1,10 @@
 #include <iostream>
 #include <string>
-#include <locale.h>
-#include <cstdlib>
-#include <time.h>
-#include <cctype>
+
 using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "Portuguese");
     string CasosDeTeste[20];
     int T_NumCasosTestes, NumAlunos, TrocasNecessarias, Alunos[2];
     cin >> T_NumCasosTestes;
